@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Sets up game and GUI text
 // You can write your code in this editor
 
 str = "";
@@ -15,3 +15,5 @@ text[2] = "Where is everybody?";
 text[3] = "anybody?";
 text[4] = "hello?";
 text[5] = "?";
+
+text_clear = false;

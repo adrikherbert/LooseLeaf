@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_invisibleWall",
-    "path": "sprites/spr_invisibleWall/spr_invisibleWall.yy",
+    "name": "spr_sleepz",
+    "path": "sprites/spr_sleepz/spr_sleepz.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,7 +20,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_sleepz","path":"objects/obj_sleepz/obj_sleepz.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_sleepz","path":"objects/obj_sleepz/obj_sleepz.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -28,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_disappearingWall",
+  "name": "obj_sleepz",
   "tags": [],
   "resourceType": "GMObject",
 }

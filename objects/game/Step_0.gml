@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description updates GUI
 // You can write your code in this editor
 
 if (l == 0) {
@@ -20,15 +20,21 @@ if (l == 0) {
 			break;
 		case 5:
 			audio_play_sound(effect_questionMark_3, 2, false);
+			instance_deactivate_layer("Disappearing_Walls");
+			obj_camera.intro_complete = true;
 			break;
 	}
 }
 
 l += 0.5;
 
-print = string_copy(str, 1, l);
+if (text_clear) {
+	print = "";
+} else {
+	print = string_copy(str, 1, l);
+}
 
-if ((l > (string_length(str) + 250)) && (next < 5)) {
+if ((l > (string_length(str) + 50)) && (next < 5)) {
 	l = 0;
 	next++;
 }

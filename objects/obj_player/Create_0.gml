@@ -1,4 +1,4 @@
-/// @description Initialize global object values
+/// @description Sets up player data
 // You can write your code in this editor
 
 hsp = 0;		//horizontal speed

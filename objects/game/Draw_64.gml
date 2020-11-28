@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Defines GUI updating
 // You can write your code in this editor
 draw_set_color(c_white);
 draw_set_halign(fa_center);
