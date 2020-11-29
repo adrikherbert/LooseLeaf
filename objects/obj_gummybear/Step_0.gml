@@ -34,6 +34,11 @@ if (activated) {
 	switch (sprite_select) {
 		case 4:
 			sprite_index = spr_gummybear_red_panic;
+			audio_play_sound(effect_panicked_squiggle, -1, true);
+			break;
+		case 5:
+			sprite_index = spr_gummybear_red_awake;
+			audio_stop_sound(effect_panicked_squiggle);
 			break;
 		default:
 			sprite_index = spr_gummybear_red_awake;

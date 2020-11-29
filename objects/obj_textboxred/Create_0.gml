@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Sets up initial values for origin
 // You can write your code in this editor
 text[0] = "Default text";
 print = "";
