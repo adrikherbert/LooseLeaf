@@ -34,7 +34,7 @@ if (text_clear) {
 	print = string_copy(str, 1, l);
 }
 
-if ((l > (string_length(str) + 50)) && (next < 5)) {
+if ((l > (string_length(str) + 10)) && (next < 5)) {
 	l = 0;
 	next++;
 }

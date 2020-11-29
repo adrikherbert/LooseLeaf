@@ -41,6 +41,5 @@ if (intro_complete) {
 if ((camera_get_view_x(cam) >= gummybear_location - camera_get_view_width(cam)) && !alarm0_triggered) {
 	alarm0_triggered = true;
 	game.alarm[0] = 2 * room_speed;
-	obj_gummybear.alarm[0] = 7 * room_speed;
 	instance_activate_layer("Disappearing_Walls");
 }

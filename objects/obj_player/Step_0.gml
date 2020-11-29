@@ -16,6 +16,7 @@ vsp = vsp + grv;
 
 if (place_meeting(x, y + 1, obj_invisibleWall) && (key_up)) {
 	vsp = -15;
+	instance_create_depth(x, y, 1, obj_jumpcloud);
 }
 
 if (place_meeting(x + hsp, y, obj_invisibleWall)) {
