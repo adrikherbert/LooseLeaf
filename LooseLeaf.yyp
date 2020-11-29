@@ -22,6 +22,7 @@
     {"id":{"name":"spr_textbox_red","path":"sprites/spr_textbox_red/spr_textbox_red.yy",},"order":0,},
     {"id":{"name":"effect_questionMark_1","path":"sounds/effect_questionMark_1/effect_questionMark_1.yy",},"order":2,},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":5,},
+    {"id":{"name":"spr_gummybear_red_panic","path":"sprites/spr_gummybear_red_panic/spr_gummybear_red_panic.yy",},"order":3,},
     {"id":{"name":"spr_jumpcloud","path":"sprites/spr_jumpcloud/spr_jumpcloud.yy",},"order":1,},
     {"id":{"name":"spr_sleepz","path":"sprites/spr_sleepz/spr_sleepz.yy",},"order":0,},
     {"id":{"name":"obj_jumpcloud","path":"objects/obj_jumpcloud/obj_jumpcloud.yy",},"order":8,},
