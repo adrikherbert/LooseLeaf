@@ -8,6 +8,9 @@ yTo = ystart;
 intro_complete = false;
 camera_pan_complete =  false;
 gummybear_location = obj_gummybear.x;
+gummybear_room_width = 8000;
 alarm0_triggered = false;
 
 y = 794
+
+camera_target_step = 0;

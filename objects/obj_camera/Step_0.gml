@@ -7,8 +7,19 @@ if (instance_exists(obj_player) && !alarm0_triggered) {
 	xTo = obj_player.x;
 	yTo = obj_player.y;
 } else {
-	xTo = room_width - widthhalf;
-	yTo = obj_player.y;
+	switch (camera_target_step) {
+		case 0:
+			xTo = gummybear_room_width - widthhalf;
+			yTo = obj_player.y;
+			break;
+		case 1:
+			xTo = obj_player.x;
+			yTo = obj_player.y;
+			break;
+		default:
+			xTo = obj_player.x;
+			yTo = obj_player.y;
+	}
 }	
 
 
@@ -20,7 +31,16 @@ if (intro_complete) {
 }
 
 if (intro_complete) {
-	x = clamp(x, widthhalf, room_width - widthhalf);
+	switch (camera_target_step) {
+		case 0:
+			x = clamp(x, widthhalf, gummybear_room_width - widthhalf);
+			break;
+		case 1:
+			x = clamp(x, gummybear_room_width - widthhalf, room_width - widthhalf);
+			break;
+		default:
+			x = clamp(x, widthhalf, room_width - widthhalf);
+	}
 	
 	if (!camera_pan_complete) {
 		y = clamp(y, 794 + heighthalf, 100000);

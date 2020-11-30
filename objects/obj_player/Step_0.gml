@@ -14,44 +14,35 @@ hsp = move * walksp;					// sets movement
 
 vsp = vsp + grv;
 
-if (place_meeting(x, y + 1, obj_invisibleWall) && (key_up)) {
+if (place_meeting(x, y + 1, obj_wall_parent) && (key_up)) {
 	vsp = -15;
 	instance_create_depth(x, y, 1, obj_jumpcloud);
 }
 
-if (place_meeting(x + hsp, y, obj_invisibleWall)) {
+if (place_meeting(x + hsp, y, obj_wall_parent)) {
 	
-	while (!place_meeting(x + sign(hsp), y, obj_invisibleWall)) {
-		x = x + sign(hsp);
+	while (!place_meeting(x + sign(hsp), y, obj_wall_parent)) {
+		x += sign(hsp);
 	}
 	
 	hsp = 0;
 }
 
-if (place_meeting(x + hsp, y, obj_disappearingWall)) {
-	
-	while (!place_meeting(x + sign(hsp), y, obj_disappearingWall)) {
-		x = x + sign(hsp);
-	}
-	
-	hsp = 0;
-}
+x += hsp;
 
-x = x + hsp;
-
-if (place_meeting(x, y + vsp, obj_invisibleWall)) {
+if (place_meeting(x, y + vsp, obj_wall_parent)) {
 	
-	while (!place_meeting(x, y + sign(vsp), obj_invisibleWall)) {
-		y = y + sign(vsp);
+	while (!place_meeting(x, y + sign(vsp), obj_wall_parent)) {
+		y += sign(vsp);
 	}
 	
 	vsp = 0;
 }
 
-y = y + vsp;
+y += vsp;
 
 /* ANIMATIONS */
-if (!place_meeting(x, y + 1, obj_invisibleWall)) {
+if (!place_meeting(x, y + 1, obj_wall_parent)) {
 	sprite_index = spr_onyx_jump;
 	image_speed =  0;
 	if (audio_is_playing(effect_running)) audio_stop_sound(effect_running);
@@ -73,5 +64,3 @@ if (!place_meeting(x, y + 1, obj_invisibleWall)) {
 }
 
 if (hsp != 0) image_xscale = sign(hsp);
-
-camera_set_view_pos(view_camera[0], x - (camerawidth / 2), y - (cameraheight / 2));

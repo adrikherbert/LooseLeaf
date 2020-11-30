@@ -46,3 +46,10 @@ if (activated) {
 	
 	activated = false;
 }
+
+if (dialogue_ended && !encounter_ended) {
+	obj_camera.camera_target_step++;
+	instance_deactivate_layer("Disappearing_Walls_2");
+	instance_activate_layer("Effects");
+	encounter_ended = true;
+}

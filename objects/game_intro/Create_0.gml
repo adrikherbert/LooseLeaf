@@ -17,3 +17,6 @@ text[4] = "hello?";
 text[5] = "?";
 
 text_clear = false;
+
+instance_deactivate_layer("Effects");
+instance_deactivate_layer("PianoPlatforms_Level");

@@ -5,4 +5,5 @@ image_angle = irandom_range(0, 360);
 image_xscale = irandom_range(0.5, 1);
 image_yscale = image_xscale;
 x_direction = irandom_range(-2, 2);
-y_direction = -1;
+y_direction = irandom_range(-1, -3);
+spin_speed = irandom_range(1, 5);
