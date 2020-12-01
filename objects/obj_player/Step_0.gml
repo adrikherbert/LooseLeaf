@@ -7,7 +7,10 @@
 */
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
+
 key_up = keyboard_check_pressed(vk_up);
+key_left_pressed = keyboard_check_pressed(vk_left);
+key_right_pressed = keyboard_check_pressed(vk_right);
 
 var move = key_right - key_left;		// 1 if right, -1 if left
 hsp = move * walksp;					// sets movement
@@ -28,6 +31,7 @@ if (place_meeting(x + hsp, y, obj_wall_parent)) {
 	hsp = 0;
 }
 
+
 x += hsp;
 
 if (place_meeting(x, y + vsp, obj_wall_parent)) {
@@ -43,12 +47,17 @@ y += vsp;
 
 /* ANIMATIONS */
 if (!place_meeting(x, y + 1, obj_wall_parent)) {
-	sprite_index = spr_onyx_jump;
-	image_speed =  0;
-	if (audio_is_playing(effect_running)) audio_stop_sound(effect_running);
+	if (!dash) {
+		sprite_index = spr_onyx_jump;
+		image_speed =  0;
+		if (audio_is_playing(effect_running)) audio_stop_sound(effect_running);
 	
-	if (sign(vsp) > 0) image_index = 1;
-	else image_index = 0;
+		if (sign(vsp) > 0) image_index = 1;
+		else image_index = 0;
+	} else {
+		sprite_index = spr_onyx_dash;
+	}
+	
 } else {
 	image_speed = 1;
 	
